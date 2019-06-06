@@ -1,0 +1,17 @@
+%h1= 'All Requests'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= 'Name'
+      %th= 'Amount'
+      %th= 'Currency'
+  %tbody
+  - @credit_requests.each do |credit_request|
+    %tr
+      %td
+        = credit_request.client.last_name
+      %td
+        = credit_request.value
+      %td
+        = credit_request.currency
