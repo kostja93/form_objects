@@ -1,0 +1,2 @@
+class Bail < ApplicationRecord
+end
