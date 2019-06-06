@@ -35,12 +35,12 @@ ActiveRecord::Schema.define(version: 2019_06_06_135007) do
   end
 
   create_table "credit_requests", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "client_id"
     t.float "value"
     t.string "currency"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_credit_requests_on_user_id"
+    t.index ["client_id"], name: "index_credit_requests_on_client_id"
   end
 
 end
