@@ -1,0 +1,7 @@
+%h1= 'Your Name'
+= 'Please enter your name'
+
+= simple_form_for(@client_name) do |f|
+  = f.input :first_name
+  = f.input :last_name
+  = f.button :submit, 'Next Step', class: 'btn btn-primary'
