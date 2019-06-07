@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :client_names, only: [:new, :create]
   resources :clients, only: [] do
     resources :credit_requests, only: [:new, :create]
+    resources :client_datas, only: [:new, :create]
   end
 end

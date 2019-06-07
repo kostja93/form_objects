@@ -1,0 +1,10 @@
+%h1= 'Add your data'
+= 'Please provide additional information about your person'
+
+= simple_form_for(@client_data, url: client_client_datas_path) do |f|
+  = f.input :street_name
+  = f.input :house_number
+  = f.input :post_code
+  = f.input :city
+  = f.input :birthday
+  = f.button :submit, 'Request some $$$', class: 'btn btn-primary'
