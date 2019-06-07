@@ -1,0 +1,15 @@
+%h1= 'New Credit Request'
+
+= simple_form_for @employee_credit_request do |f|
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :street_name
+  = f.input :house_number
+  = f.input :post_code
+  = f.input :city
+  = f.input :birthday
+  %hr
+  = f.input :value
+  = f.input :currency
+  %hr
+  = f.button :submit, 'Create Credit Request', class: 'btn btn-primary'
