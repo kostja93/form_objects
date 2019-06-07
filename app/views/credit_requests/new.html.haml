@@ -1,0 +1,7 @@
+%h1= 'How much money do you want'
+= 'Please enter how much money you want to lend'
+
+= simple_form_for(@credit_request, url: client_credit_requests_path) do |f|
+  = f.input :value
+  = f.input :currency
+  = f.button :submit, 'Next Step', class: 'btn btn-primary'

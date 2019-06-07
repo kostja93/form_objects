@@ -6,8 +6,8 @@ class ClientNamesController < ApplicationController
   def create
     @client_name = ClientName.new(params.require(:client_name).permit(:first_name, :last_name))
 
-    if @client_name.save
-      redirect_to employee_credit_requests_path
+    if @client = @client_name.save
+      redirect_to new_client_credit_request_path(client_id: @client.id)
     else
       flash[:alert] = 'It is mendotory to enter your name'
       render :new
