@@ -9,11 +9,19 @@ class CreditRequestsController < ApplicationController
     @credit_request = CreditRequest.new(credit_request_params)
 
     if @credit_request.save
-      redirect_to employee_credit_requests_path
+      redirect_to new_client_client_data_path(client_id: @client.id)
     else
       flash[:alert] = 'Something went wrong'
       render :new
     end
+  end
+
+  def show
+    @credit = @client.credit_requests.find(params[:id])
+  end
+
+  def index
+    @credit_requests = @client.credit_requests
   end
 
   private

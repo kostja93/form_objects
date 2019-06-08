@@ -8,7 +8,7 @@ class ClientDatasController < ApplicationController
 
     if @client_data.save
       flash[:notice] = 'Your Request will be reviewed, we will get back to you'
-      redirect_to employee_credit_requests_path
+      redirect_to client_credit_request_path(CreditRequest.last, client_id: params[:client_id])
     else
       flash[:alert] = 'Upsy'
       render :new

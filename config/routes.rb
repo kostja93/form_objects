@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :employee_credit_requests, only: [:index, :new, :create]
   resources :client_names, only: [:new, :create]
   resources :clients, only: [] do
-    resources :credit_requests, only: [:new, :create]
+    resources :credit_requests, only: [:new, :create, :index, :show]
     resources :client_datas, only: [:new, :create]
   end
 end
