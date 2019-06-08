@@ -1,0 +1,15 @@
+.row
+  .col-7
+    %h1= 'Your Request'
+  .col-5
+    = link_to 'Your Credit Requests', client_credit_requests_path(client_id: @credit.client.id), class: 'btn btn-primary'
+    = link_to 'New Credit Request', new_client_credit_request_path(client_id: @credit.client.id), class: 'btn btn-secondary'
+.row
+  .col-6
+    %h2= 'Personal Data'
+    %p= "#{@credit.client.first_name} #{@credit.client.last_name}"
+    %p= "#{@credit.client.street_name} #{@credit.client.house_number}"
+    %p= "#{@credit.client.post_code} #{@credit.client.city}"
+  .col-6
+    %h2= 'Credit'
+    %p= "#{@credit.value} #{@credit.currency}"

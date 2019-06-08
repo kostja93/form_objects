@@ -1,0 +1,21 @@
+.row
+  .col
+    %h1= 'Your Requests'
+  .col
+    = link_to 'New Credit Request', new_client_credit_request_path(client_id: @client.id), class: 'btn btn-primary'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= 'Amount'
+      %th= 'Currency'
+      %th
+  %tbody
+  - @credit_requests.each do |credit_request|
+    %tr
+      %td
+        = credit_request.value
+      %td
+        = credit_request.currency
+      %td
+        = link_to 'show', client_credit_request_path(client_id: @client.id, id: credit_request.id)

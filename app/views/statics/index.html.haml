@@ -1,1 +1,9 @@
-%h1= "Hallo"
+.row
+  .col
+    %h1= "Hello"
+    %p= 'Choose your role!'
+.row
+  .col
+    = link_to 'I\'m a employee', employee_credit_requests_path, class: 'btn btn-success'
+  .col
+    = link_to 'I\'m a client', new_client_name_path, class: 'btn btn-warning'
