@@ -1,24 +1,17 @@
-# README
+# Form Objects
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install
 
-Things you may want to cover:
+Clone the repo to your machine and excute following lines:
 
-* Ruby version
+```
+bundle install
+bundle exec rails db:create db:migrate
+bundle exec rails server
+```
 
-* System dependencies
+## Also see
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[7 Patterns to Refactor Fat ActiveRecord Models](https://codeclimate.com/blog/7-ways-to-decompose-fat-activerecord-models/)
+[ActiveModel Form Objects](https://thoughtbot.com/blog/activemodel-form-objects)
+[Rails Patterns by Pawel Dabrowski](http://pdabrowski.com/blog/introduction-to-rails-patterns)
